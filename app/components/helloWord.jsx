@@ -1,8 +1,14 @@
 import React from 'react';
 
 const HelloWord = React.createClass({
+	propTypes: {
+		name: React.PropTypes.string
+	},
+
 	render(){
-		return <h1>Hello Word - {this.props.name}</h1>;
+
+		let name = this.props.name ? this.props.name : "Anonimo"; 
+		return <h1>Hello Word - {name}</h1>;
 	}
 });
 

@@ -3,6 +3,6 @@ import ReactDOM from 'react-dom';
 import HelloWord from './components/helloWord.jsx';
 
 ReactDOM.render(
-	<HelloWord name="Gabriel Furlan" />,
+	<HelloWord />,
 	document.querySelector('#app')
 );
