@@ -12,7 +12,8 @@ class Home extends React.Component {
 	}
 
 	componentDidMount () {
-		this.refs.search.refs.input.addEventListener('keyup', () => this.change(this))
+		this.refs.search.refs.input.addEventListener('change', () => this.change(this));
+		this.refs.search.refs.input.focus();
 	}
 
 	change () {
