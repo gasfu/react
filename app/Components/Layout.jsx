@@ -7,9 +7,9 @@ class Layout extends React.Component {
 		return ( 
 			<seciton>
 				<Navigation />
-				<div className='container'>
+				<main className='container main'>
 					{this.props.children}
-				</div>
+				</main>
 			</seciton>
 		);
 	}
