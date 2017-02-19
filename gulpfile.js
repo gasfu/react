@@ -6,8 +6,8 @@ const sourcemaps = require('gulp-sourcemaps');
 const rename = require('gulp-rename');
 
 const path = {
-	'stylesheetSRC': 'app/stylesheets/**/*.styl',
-	'stylesheetMain': 'app/stylesheets/main.styl',
+	'stylesheetSRC': 'app/Stylesheets/**/*',
+	'stylesheetMain': 'app/Stylesheets/main.styl',
 	'stylesheetDEST': 'public/dist'
 };
 

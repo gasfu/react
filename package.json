@@ -6,7 +6,7 @@
   "dependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "webpack": "^2.2.1"
+    "react-router": "^3.0.2"
   },
   "devDependencies": {
     "babel-core": "^6.23.1",
@@ -19,6 +19,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-sourcemaps": "^2.4.1",
     "gulp-stylus": "^2.6.0",
+    "webpack": "^2.2.1",
     "webpack-dev-server": "^2.3.0"
   },
   "scripts": {

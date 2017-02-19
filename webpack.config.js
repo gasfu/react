@@ -3,11 +3,11 @@ const path = require('path'),
 
 module.exports = {
 	entry: {
-		app: path.join(__dirname, '/app/app.js')
+		app: path.join(__dirname, '/app/App.js')
 	},
 
 	output: {
-		path: path.join(__dirname, '/dist'),
+		path: path.join(__dirname, '/public/dist'),
 		filename: 'app.min.js'
 	},
 
