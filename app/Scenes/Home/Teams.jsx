@@ -2,16 +2,14 @@ import React from 'react';
 import Http from './../../Utils/Http.js';
 
 class Teams extends React.Component {
-	constructor() {
-		super();
-		this.state = {
-			teams: []
-		}
+	constructor(props) {
+		super(props);
+		this.state = {teams: {}};
 	}
 
 	render () {
-		let teams = Object.keys(this.state.teams).map(() => this.state.teams[key]);
-		return null;
+		let html = (team) => <h4>{team.name}</h4>;
+		return <div>{Object.values(this.state.teams).map(html)}</div>;
 	}
 }
 

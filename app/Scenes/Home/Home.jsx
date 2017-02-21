@@ -3,13 +3,14 @@ import React from 'react';
 import Search from './Search.jsx';
 import Teams from './Teams.jsx';
 
+import TeamsAction from '../../Action/TeamsAction.js';
+
 
 class Home extends React.Component {
 	constructor () {
 		super();
-		this.state = {
-			header: ''
-		}	
+		TeamsAction.all;
+		this.state = { header: '' }	
 	}
 
 	componentDidMount () {
@@ -19,12 +20,8 @@ class Home extends React.Component {
 
 	change () {
 		let input = this.refs.search.refs.input;
-		window.sessionStorage.setItem('teste', input.value);
-		this.setState({
-			header: input.value != '' ? '--top' : ''
-		});
-
-
+		this.setState({ header: input.value != '' ? '--top' : '' });
+		this.refs.teams.setState({ teams: input.value != '' ? TeamsAction.getString(input.value) : ''});
 	}
 
 	render () {
@@ -34,7 +31,7 @@ class Home extends React.Component {
 					<Search ref="search" />
 				</header>
 				<main>
-					<Teams />
+					<Teams ref="teams"/>
 				</main>
 			</section>			
 		);
