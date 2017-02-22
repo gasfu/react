@@ -9,7 +9,7 @@ import TeamsAction from '../../Action/TeamsAction.js';
 class Home extends React.Component {
 	constructor () {
 		super();
-		TeamsAction.all;
+		new TeamsAction.all;
 		this.state = { header: '' }	
 	}
 

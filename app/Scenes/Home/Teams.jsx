@@ -1,5 +1,6 @@
 import React from 'react';
 import Http from './../../Utils/Http.js';
+import CardsTeam from './CardsTeams.jsx'
 
 class Teams extends React.Component {
 	constructor(props) {
@@ -8,8 +9,8 @@ class Teams extends React.Component {
 	}
 
 	render () {
-		let html = (team) => <h4>{team.name}</h4>;
-		return <div>{Object.values(this.state.teams).map(html)}</div>;
+		let html = (team) => <CardsTeam image={team.coat_of_arms}>{team.name}</CardsTeam>;
+		return <ul className="row">{Object.values(this.state.teams).map(html)}</ul>;
 	}
 }
 
